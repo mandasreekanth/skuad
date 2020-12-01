@@ -119,10 +119,10 @@ app.post('/api/v1/passenger/available_cabs/',
               },
               function (err) {
                 if (err) {
-                  res.status(500).send({
+                  res.status(400).send({
                     status: "error",
-                    statusCode: 500,
-                    message: err.message,
+                    statusCode: 400,
+                    reason: err.message,
                     data: {},
                   });
                 } else {
